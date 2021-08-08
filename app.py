@@ -10,11 +10,11 @@ model=keras.models.load_model('static/model1')
 app=Flask(__name__)
 
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/')
 def shower():
     return render_template('index.html')
 
-@app.route('/picturechecking',methods=['GET','POST'])
+@app.route('/picturechecking',methods=['POST'])
 def upload_files():
     try:
         uploaded_file = request.files['w']
