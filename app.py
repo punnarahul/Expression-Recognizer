@@ -10,7 +10,7 @@ model=keras.models.load_model('static/model1')
 app=Flask(__name__)
 
 
-@app.route('/')
+@app.route()
 def shower():
     return render_template('index.html')
 
