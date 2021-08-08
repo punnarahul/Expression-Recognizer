@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expression-recognizer</title>
+    <link rel="stylesheet" href="{{ url_for('static/css', filename='style.css') }}">
+    </head>
+<body>
+    <form action="/picturechecking" method="POST" enctype="multipart/form-data" >
+        <div class="c"> Select image to upload</div>
+        <input type="file" accept='image/*' class='w' name="w" id="file">
+        <input type="submit" class='button' value="Upload">
+    </form>
+    </div>
+    <div class="no">{{nop}}</div>
+    <div class="img"><img src="{{reference}}" alt=""></div>
+        <div class="emotion">
+            <div class="happy u" id='happy'>
+                {{happy}}
+            </div>
+            <div class="sad u" id='sad'>
+                {{sad}}
+            </div>
+            <div class="normal u" id='normal'>
+                {{normal}}
+            </div>
+            <div class="suprise u" id='surprise'>
+                {{surprise}}
+            </div>
+            <div class="angry u" id='angry'>
+                {{angry}}
+            </div>
+            <div class="disgust u" id='disgust'>
+                {{disguting}}
+            </div>
+            <div class="fear u" id='fear'>
+                {{fear}}
+            </div>
+            <div class="th t">Happy</div>
+            <div class="ts t">Sad</div>
+            <div class="th t">Normal</div>
+            <div class="ts t">Suprise</div>
+            <div class="th t">Angry</div>
+            <div class="ts t">Disgust</div>
+            <div class="th t">Fear</div>
+        </div>
+        <script src="{{ url_for('static/js', filename='script.js') }}"></script>
+</body>
+</html>
