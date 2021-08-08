@@ -1,11 +1,9 @@
-from flask import Flask, render_template, request  #, redirect, url_for, abort
-from tensorflow import keras
-# from werkzeug.datastructures import FileStorage
+from flask import Flask, render_template, request  
+import keras
 import cv2
 
 import numpy as np
 
-#my model here   
 model=keras.models.load_model('static/model1')
 
 
@@ -17,7 +15,6 @@ def shower():
     return render_template('index.html')
 
 @app.route('/picturechecking',methods=['GET','POST'])
-# @app.route('/', methods=['POST'])
 def upload_files():
     try:
         uploaded_file = request.files['w']

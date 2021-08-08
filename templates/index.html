@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expression-recognizer</title>
-    <link rel="stylesheet" href="{{ url_for('static/css', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
 <body>
     <form action="/picturechecking" method="POST" enctype="multipart/form-data" >
@@ -46,6 +46,6 @@
             <div class="ts t">Disgust</div>
             <div class="th t">Fear</div>
         </div>
-        <script src="{{ url_for('static/js', filename='script.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
